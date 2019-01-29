@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Arcade game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+           <div class="col-md-12" id="container-canvas">
+             <!-- Here goes the Canvas-->
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="characters-container">
+                <h1>Choose your Character</h1>
+                <ul style="display: flex; list-style-type: none; justify-content:center;" id="character-list">
+                    <li><img onCLick="javascript:" id="char-boy" src="images/char-boy.png" alt="Boy Character"></li>
+                    <li><img id="char-cat-girl" src="images/char-cat-girl.png" alt="Cat Girl Character"></li>
+                    <li><img id="char-horn-girl" src="images/char-horn-girl.png" alt="Horn Girl Character"></li>
+                    <li><img id="char-pink-girl" src="images/char-pink-girl.png" alt="Pink Girl Character"></li>
+                    <li><img id="char-princess-girl" src="images/char-princess-girl.png" alt="Princes Girl Character"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/resources.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/engine.js"></script>
+    <script type="text/javascript">
+        
+    $('#character-list').find('img').attr('onClick', 'player.changeCharacter(id)');     // This changes the player depending on clicking the image
+    </script>
+</body>
+</html>
